@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>드랍쉽 좌표 이동</title>
     <script>
         function toDropship(){
-            var point = document.getElementById('pos');
-            var base_URL = "https://g2sh.me/apran/"+point;
-            window.location.replace(base_URL);
+            var point = document.getElementById('pos').value;
+            var Url = "https://g2sh.me/apran/" + point;
+            window.location.replace(Url);
         }
     </script>
 </head>
 <body>
-    <form>
-        <input type="text" id="pos">
-        <input type="submit" value="이동" onclick="toDropship()">
+    <form method="get">
+        <center>
+        좌표 : <input type="text" id="pos">
+        <input type="button" value="이동" onclick="toDropship()">
+        </center>
     </form>
 </body>
 </html>
