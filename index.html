@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var point = prompt("드랍쉽 좌표를 입력하시오");
-        var base_URL = "https://g2sh.me/apran/";
-        window.location.replace(base_URL+point);
+        function toDropship(){
+            var point = document.getElementById('pos');
+            var base_URL = "https://g2sh.me/apran/"+point;
+            window.location.replace(base_URL);
+        }
     </script>
 </head>
 <body>
-    
+    <form>
+        <input type="text" id="pos">
+        <input type="submit" value="이동" onclick="toDropship()">
+    </form>
 </body>
 </html>
